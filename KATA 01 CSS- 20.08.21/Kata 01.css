@@ -1,0 +1,44 @@
+html {
+  height: 100vh;
+  background-color: rgba(26, 52, 59, 0.933);
+}
+
+.exterior {
+  position: relative;
+  background-color: rgba(23, 97, 119, 0.933);
+  width: 500px;
+  height: 400px;
+  text-align: auto;
+  margin: auto;
+  margin-top: 15rem;
+}
+
+.interior {
+  position: absolute;
+  background-color: rgba(60, 141, 165, 0.933);
+  width: 150px;
+  height: 100px;
+  font-size: 3rem;
+  border-image-width: 0px;
+  text-align: center;
+  vertical-align: center;
+  color: white;
+}
+
+#a1 {
+  left: 0px;
+}
+
+#a2 {
+  right: 0px;
+}
+
+#a3 {
+  bottom: 0px;
+  left: 0px;
+}
+
+#a4 {
+  bottom: 0px;
+  right: 0px;
+}

@@ -1,0 +1,35 @@
+html {
+  height: 100vh;
+  background-color: rgba(26, 52, 59, 0.933);
+}
+
+.load-bar {
+  position: relative;
+  background-color: rgba(60, 141, 165, 0.933);
+  width: 600px;
+  height: 200px;
+  text-align: auto;
+  margin: auto;
+  margin-top: 20rem;
+  display: flex;
+  flex-direction: row;
+}
+
+.bar-int {
+  display: inline-block;
+  background-color: rgba(60, 141, 165, 0.933);
+  width: 12px;
+  height: 200px;
+  border-image-width: 0px;
+  text-align: center;
+  vertical-align: center;
+  color: white;
+}
+
+.bar-int:hover {
+  background-color: #dd303094;
+}
+
+.bar-int:hover ~ .bar-int {
+  background-color: #dd303094;
+}
