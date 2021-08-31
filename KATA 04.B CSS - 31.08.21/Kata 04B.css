@@ -1,0 +1,88 @@
+html {
+  background-color: rgba(26, 52, 59, 1);
+  overflow: hidden;
+}
+
+body {
+  position: relative;
+  background-color: rgba(26, 52, 59, 1);
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.elements {
+  position: relative;
+  width: 30%;
+  height: 70%;
+  margin: auto;
+  background-image: url(perritos.jpg);
+  background-size: 100%;
+  overflow: hidden;
+}
+
+#ele-izq {
+  margin-right: 3rem;
+}
+
+#ele-der {
+  margin-left: 3rem;
+}
+
+.tittles,
+.descriptions {
+  position: absolute;
+  z-index: 2;
+  margin: auto;
+  display: block;
+  text-align: center;
+  color: white;
+  background: rgba(60, 141, 165, 0.8);
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+}
+
+.tittles {
+  top: 0px;
+  font-size: 1.2rem;
+  height: 3rem;
+}
+
+.descriptions {
+  bottom: 0px;
+  font-size: 0.8rem;
+  height: 6rem;
+}
+
+#des-izq {
+  transform: translateX(100%);
+}
+
+#des-der {
+  transform: translateY(100%);
+}
+
+#ele-izq:hover #tit-izq {
+  transform: translateX(-100%);
+  transition: transform 300ms;
+}
+
+#ele-izq:hover #des-izq {
+  transform: translateX(0);
+  transition: transform 300ms;
+}
+
+#ele-der:hover #tit-der {
+  transform: translateY(-100%);
+  transition: transform 300ms;
+}
+
+#ele-der:hover #des-der {
+  transform: translateY(0);
+  transition: transform 300ms;
+}
