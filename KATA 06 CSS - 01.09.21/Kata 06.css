@@ -1,0 +1,82 @@
+html {
+  background-color: rgba(26, 52, 59, 1);
+  overflow: hidden;
+}
+
+body {
+  position: relative;
+  background-color: rgba(26, 52, 59, 1);
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+}
+
+.container {
+  width: 50%;
+  height: 10%;
+  display: flex;
+  margin: auto;
+  justify-content: space-around;
+}
+
+.rectangles {
+  color: black;
+  font-family: sans-serif;
+  font-weight: bolder;
+  font-size: 1.5rem;
+  background-color: white;
+  width: 20%;
+  height: 90%;
+  display: flex;
+  border-radius: 10px;
+  border-width: 4px;
+  border-color: tomato;
+  border-style: solid;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+#arrow-top {
+  width: 0;
+  height: 0;
+  border-left: 25px solid transparent;
+  border-right: 25px solid transparent;
+  border-bottom: 25px solid tomato;
+  position: absolute;
+  top: -25px;
+}
+
+#arrow-bottom {
+  width: 0;
+  height: 0;
+  border-left: 25px solid transparent;
+  border-right: 25px solid transparent;
+  border-top: 25px solid tomato;
+  position: absolute;
+  bottom: -25px;
+}
+
+#arrow-left {
+  width: 0;
+  height: 0;
+  border-top: 25px solid transparent;
+  border-bottom: 25px solid transparent;
+  border-right: 25px solid tomato;
+  position: absolute;
+  left: -25px;
+}
+
+#arrow-right {
+  width: 0;
+  height: 0;
+  border-top: 25px solid transparent;
+  border-bottom: 25px solid transparent;
+  border-left: 25px solid tomato;
+  position: absolute;
+  right: -25px;
+}

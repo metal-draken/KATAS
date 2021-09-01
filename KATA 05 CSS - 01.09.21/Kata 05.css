@@ -1,0 +1,59 @@
+html {
+  background-color: rgba(26, 52, 59, 1);
+  overflow: hidden;
+}
+
+body {
+  position: relative;
+  background-color: rgba(26, 52, 59, 1);
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+}
+
+.squares {
+  display: flex;
+  align-items: stretch;
+  justify-content: space-between;
+  width: 70%;
+  height: 30%;
+}
+
+.square {
+  position: relative;
+  background-color: rgba(32, 134, 165, 0.933);
+  width: 20%;
+  height: 90%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.dots {
+  height: 20%;
+  width: 20%;
+  background-color: rgba(196, 52, 52, 0.863);
+  border-radius: 50%;
+  transition: transform 400ms ease-out;
+}
+
+#square1:hover #dot1 {
+  transform: translateX(-400%);
+}
+
+#square2:hover #dot2 {
+  transform: translateY(-400%);
+}
+
+#square3:hover #dot3 {
+  transform: translateX(400%);
+}
+
+#square4:hover #dot4 {
+  transform: translatey(400%);
+}

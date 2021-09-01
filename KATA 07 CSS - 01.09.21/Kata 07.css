@@ -1,0 +1,162 @@
+html {
+  background-color: rgba(26, 52, 59, 1);
+  overflow: hidden;
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.container {
+  position: relative;
+  background-color: transparent;
+  width: 70vmin;
+  height: 70vmin;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+}
+
+.squares-w-h {
+  position: relative;
+  width: 33.33333%;
+  height: 33.333333%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#center-center {
+  background-color: rgba(32, 134, 165, 0.933);
+}
+
+.arrow {
+  width: 0;
+  height: 0;
+  position: absolute;
+}
+
+#up-center-arrow {
+  border-left: 25px solid transparent;
+  border-right: 25px solid transparent;
+  border-bottom: 25px solid tomato;
+  top: 0;
+}
+
+#down-center-arrow {
+  width: 0;
+  height: 0;
+  border-left: 25px solid transparent;
+  border-right: 25px solid transparent;
+  border-top: 25px solid tomato;
+  bottom: 0;
+}
+
+#center-left-arrow {
+  width: 0;
+  height: 0;
+  border-top: 25px solid transparent;
+  border-bottom: 25px solid transparent;
+  border-right: 25px solid tomato;
+  left: 0;
+}
+
+#center-right-arrow {
+  width: 0;
+  height: 0;
+  border-top: 25px solid transparent;
+  border-bottom: 25px solid transparent;
+  border-left: 25px solid tomato;
+  right: 0;
+}
+
+#up-left-arrow {
+  width: 0;
+  height: 0;
+  border-bottom: 30px solid transparent;
+  border-left: 30px solid tomato;
+  left: 0;
+  top: 0;
+}
+
+#up-right-arrow {
+  width: 0;
+  height: 0;
+  border-bottom: 30px solid transparent;
+  border-right: 30px solid tomato;
+  right: 0;
+  top: 0;
+}
+
+#down-left-arrow {
+  width: 0;
+  height: 0;
+  border-top: 30px solid transparent;
+  border-left: 30px solid tomato;
+  left: 0;
+  bottom: 0;
+}
+
+#down-right-arrow {
+  width: 0;
+  height: 0;
+  border-top: 30px solid transparent;
+  border-right: 30px solid tomato;
+  right: 0;
+  bottom: 0;
+}
+
+.dot {
+  position: absolute;
+  height: 10%;
+  width: 10%;
+  background-color: rgba(196, 52, 52, 0.863);
+  border-radius: 50%;
+  transition: transform 400ms ease-out;
+}
+
+#up-left-hover:hover ~ .dot {
+  transform: translate(-117%, -117%);
+  transition: transform 400ms ease-out;
+}
+
+#up-center-hover:hover ~ .dot {
+  transform: translate(0px, -117%);
+  transition: transform 400ms ease-out;
+}
+
+#up-right-hover:hover ~ .dot {
+  transform: translate(117%, -117%);
+  transition: transform 400ms ease-out;
+}
+
+#center-right-hover:hover ~ .dot {
+  transform: translate(117%, 0);
+  transition: transform 400ms ease-out;
+}
+
+#center-left-hover:hover ~ .dot {
+  transform: translate(-117%, 0);
+  transition: transform 400ms ease-out;
+}
+
+#down-left-hover:hover ~ .dot {
+  transform: translate(-117%, 117%);
+  transition: transform 400ms ease-out;
+}
+
+#down-center-hover:hover ~ .dot {
+  transform: translate(0px, 117%);
+  transition: transform 400ms ease-out;
+}
+
+#down-right-hover:hover ~ .dot {
+  transform: translate(117%, 117%);
+  transition: transform 400ms ease-out;
+}

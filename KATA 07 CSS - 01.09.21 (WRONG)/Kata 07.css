@@ -1,0 +1,135 @@
+html {
+  background-color: rgba(26, 52, 59, 1);
+  overflow: hidden;
+  display: flex;
+}
+
+body {
+  position: relative;
+  background-color: rgba(26, 52, 59, 1);
+  width: 100%;
+  height: 50rem;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+}
+
+.row {
+  width: 32rem;
+  height: 12rem;
+  background-color: rgba(118, 165, 32, 0.933);
+  display: flex;
+}
+
+.squares-w-h {
+  width: 33.33333%;
+  height: 100%;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.arrow {
+  width: 0;
+  height: 0;
+  position: absolute;
+}
+
+#square {
+  position: relative;
+  background-color: rgba(32, 134, 165, 0.933);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#up-center-arrow {
+  border-left: 25px solid transparent;
+  border-right: 25px solid transparent;
+  border-bottom: 25px solid tomato;
+  top: 0;
+}
+
+#down-center-arrow {
+  width: 0;
+  height: 0;
+  border-left: 25px solid transparent;
+  border-right: 25px solid transparent;
+  border-top: 25px solid tomato;
+  bottom: 0;
+}
+
+#center-left-arrow {
+  width: 0;
+  height: 0;
+  border-top: 25px solid transparent;
+  border-bottom: 25px solid transparent;
+  border-right: 25px solid tomato;
+  left: 0;
+}
+
+#center-right-arrow {
+  width: 0;
+  height: 0;
+  border-top: 25px solid transparent;
+  border-bottom: 25px solid transparent;
+  border-left: 25px solid tomato;
+  right: 0;
+}
+
+#up-left-arrow {
+  width: 0;
+  height: 0;
+  border-bottom: 30px solid transparent;
+  border-left: 30px solid tomato;
+  left: 0;
+  top: 0;
+}
+
+#up-right-arrow {
+  width: 0;
+  height: 0;
+  border-bottom: 30px solid transparent;
+  border-right: 30px solid tomato;
+  right: 0;
+  top: 0;
+}
+
+#down-left-arrow {
+  width: 0;
+  height: 0;
+  border-top: 30px solid transparent;
+  border-left: 30px solid tomato;
+  left: 0;
+  bottom: 0;
+}
+
+#down-right-arrow {
+  width: 0;
+  height: 0;
+  border-top: 30px solid transparent;
+  border-right: 30px solid tomato;
+  right: 0;
+  bottom: 0;
+}
+
+.dot {
+  height: 30%;
+  width: 30%;
+  background-color: rgba(196, 52, 52, 0.863);
+  border-radius: 50%;
+  transform: translateY(0px);
+  transition: transform 400ms ease-out;
+}
+
+#up-left-hover:hover .dot {
+  transform: translateY(200px);
+  transition: transform 400ms ease-out;
+}
