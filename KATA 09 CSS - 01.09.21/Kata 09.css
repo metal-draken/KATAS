@@ -1,0 +1,91 @@
+html {
+  background-color: rgba(26, 52, 59, 1);
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.container {
+  position: relative;
+  width: 75vmin;
+  height: 75vmin;
+  display: grid;
+  grid-template-columns: 25vmin 25vmin 25vmin;
+  grid-template-rows: 25vmin 25vmin 25vmin;
+  grid-gap: 0px 0px;
+}
+
+.square {
+  position: relative;
+  width: 25vmin;
+  height: 25vmin;
+  background-color: rgb(61, 165, 194);
+  opacity: 0%;
+}
+
+.gif {
+  position: absolute;
+  background-color: transparent;
+  width: 75vmin;
+  height: 75vmin;
+  grid-area: 1 / 1 / 4 / 4;
+  display: none;
+}
+
+#center-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 7rem;
+  color: white;
+  opacity: 100%;
+}
+
+#down-right {
+  border-bottom-right-radius: 50%;
+  border-bottom-right-radius: 50%;
+}
+
+#down-center,
+#down-right {
+  position: relative;
+  top: 100%;
+  transform: translateY(-80%);
+  transition: all 400ms ease-out;
+}
+
+#center-center:hover ~ #down-center,
+#center-center:hover ~ #down-right {
+  opacity: 100%;
+  transform: translateY(-100%);
+  transition: all 400ms ease-out;
+}
+
+#center-center:hover {
+  color: rgb(61, 165, 194);
+}
+
+#down-center:hover {
+  opacity: 100%;
+  transform: translateY(-100%);
+}
+
+#down-center:hover ~ #down-right {
+  opacity: 100%;
+  transform: translateY(-100%);
+}
+
+#down-right:hover {
+  opacity: 100%;
+  transform: translateY(-100%);
+}
+
+#down-right:hover ~ #down-center {
+  opacity: 100%;
+  transform: translateY(-100%);
+}
