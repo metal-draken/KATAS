@@ -16,6 +16,7 @@ body {
   position: relative;
   background-color: rgb(61, 165, 194);
   will-change: all;
+  transition: all 400ms ease-in-out;
 }
 
 .animated {
@@ -55,13 +56,12 @@ body {
   pointer-events: none;
   opacity: 0;
   transform: translateY(25%);
-  transition: all 400ms ease-in-out;
 }
 
 #down:hover #right {
   pointer-events: initial;
   opacity: 1;
-  transform: translate (0, 0);
+  transform: translate(0, 0);
 }
 
 #right {
@@ -72,13 +72,13 @@ body {
   border-top-right-radius: 50px;
   pointer-events: none;
   opacity: 0;
-  transform: translate (25%, -25%);
+  transform: translate(25%, -25%);
 }
 
 #right:hover #up {
   pointer-events: initial;
   opacity: 1;
-  transform: translate (0, 0);
+  transform: translate(0, 0);
 }
 
 #up {
@@ -88,14 +88,13 @@ body {
   border-top-left-radius: 50px;
   pointer-events: none;
   opacity: 0;
-  transform: translate (-25%, -25%);
-  transition: all 400ms ease-in-out;
+  transform: translate(-25%, -25%);
 }
 
 #up:hover #left {
   pointer-events: initial;
   opacity: 1;
-  transform: translate (0, 0);
+  transform: translate(0, 0);
 }
 
 #left {
@@ -105,8 +104,7 @@ body {
   border-bottom-left-radius: 50px;
   pointer-events: none;
   opacity: 0;
-  transform: translate (-25%, 25%);
-  transition: all 400ms ease-in-out;
+  transform: translate(-25%, 25%);
 }
 
 .gif {
@@ -116,9 +114,11 @@ body {
   height: 50%;
   bottom: 0;
   left: 0;
+  display: flex;
 }
 
 .gif:before {
+  position: absolute;
   content: "?";
   display: block;
   height: 100%;
