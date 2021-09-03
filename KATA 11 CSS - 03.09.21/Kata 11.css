@@ -1,0 +1,182 @@
+* {
+  box-sizing: border-box;
+}
+
+html {
+  background-color: rgba(26, 52, 59, 1);
+  overflow: hidden;
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+  position: relative;
+  display: flex;
+  justify-content: center;
+}
+
+.container {
+  position: relative;
+  height: 30vmin;
+  width: 120vmin;
+  background-color: transparent;
+  top: 30%;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.square {
+  position: relative;
+  height: 25vmin;
+  width: 25vmin;
+  background-color: rgba(32, 134, 165, 0.933);
+}
+
+#sq2,
+#sq3,
+#sq4 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.dot {
+  height: 22.5%;
+  width: 22.5%;
+  background-color: rgba(196, 52, 52, 0.863);
+  border-radius: 50%;
+  animation: 4s infinite;
+}
+
+.dotX {
+  height: 22.5%;
+  width: 11.25%;
+  background-color: rgba(196, 52, 52, 0.863);
+  animation: 4s infinite;
+}
+
+#dot3a {
+  border-bottom-left-radius: 26.32px;
+  border-top-left-radius: 26.32px;
+}
+
+#dot3b {
+  border-bottom-right-radius: 26.32px;
+  border-top-right-radius: 26.32px;
+}
+
+#dot1 {
+  position: absolute;
+  animation-name: dot1;
+  top: 5%;
+  left: 5%;
+}
+
+@keyframes dot1 {
+  0% {
+    transform: translate(0%, 0%);
+  }
+  25% {
+    transform: translate(300%, 0%);
+  }
+  50% {
+    transform: translate(300%, 300%);
+  }
+  75% {
+    transform: translate(0%, 300%);
+  }
+  100% {
+    transform: translate(0%, 0%);
+  }
+}
+
+#dot2 {
+  animation-name: dot2;
+}
+
+@keyframes dot2 {
+  0% {
+    background-color: rgba(196, 52, 52, 0.863);
+    border-radius: 50%;
+    transform: rotateZ(0deg);
+  }
+  33% {
+    background-color: white;
+    border-radius: 0%;
+    transform: rotateZ(0deg);
+  }
+  66% {
+    background-color: white;
+    border-radius: 0%;
+    transform: rotateZ(90deg);
+  }
+  100% {
+    background-color: rgba(196, 52, 52, 0.863);
+    border-radius: 50%;
+    transform: rotateZ(90deg);
+  }
+}
+
+#dot3a {
+  animation-name: dot3a;
+  animation-duration: 2s;
+}
+
+@keyframes dot3a {
+  0% {
+    transform: translateX(0%);
+  }
+  50% {
+    transform: translateX(-50%);
+  }
+  100% {
+    transform: translateX(0%);
+  }
+}
+
+#dot3b {
+  animation-name: dot3b;
+  animation-duration: 2s;
+}
+
+@keyframes dot3b {
+  0% {
+    transform: translateX(0%);
+  }
+  50% {
+    transform: translateX(50%);
+  }
+  100% {
+    transform: translateX(0%);
+  }
+}
+
+#dot4 {
+  animation-name: dot4;
+  animation-duration: 2s;
+}
+
+@keyframes dot4 {
+  0% {
+    transform: scale(1);
+  }
+  40% {
+    transform: scale(1);
+  }
+  45% {
+    transform: scale(1.3);
+  }
+  50% {
+    transform: scale(1);
+  }
+  55% {
+    transform: scale(1.3);
+  }
+  60% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
