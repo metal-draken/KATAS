@@ -8,84 +8,142 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-}
-
-.container {
-  position: relative;
-  width: 75vmin;
-  height: 75vmin;
-  display: grid;
-  grid-template-columns: 25vmin 25vmin 25vmin;
-  grid-template-rows: 25vmin 25vmin 25vmin;
-  grid-gap: 0px 0px;
+  color: white;
+  font-size: 9vmin;
 }
 
 .square {
   position: relative;
-  width: 25vmin;
-  height: 25vmin;
   background-color: rgb(61, 165, 194);
-  opacity: 0%;
+  will-change: all;
+}
+
+.animated {
+  transition: all 400ms ease-in-out;
+}
+
+#center {
+  width: 30vmin;
+  height: 30vmin;
+}
+
+#center:before {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  content: "?";
+  display: block;
+  transform: translate(-50%, -50%);
+  transition: all 400ms ease-in-out;
+}
+
+#center:hover:before {
+  opacity: 0;
+}
+
+#center:hover #down {
+  pointer-events: initial;
+  opacity: 1;
+  transform: translateY(0);
+}
+
+#down {
+  height: 100%;
+  width: 200%;
+  border-bottom-right-radius: 50px;
+  bottom: -100%;
+  pointer-events: none;
+  opacity: 0;
+  transform: translateY(25%);
+  transition: all 400ms ease-in-out;
+}
+
+#down:hover #right {
+  pointer-events: initial;
+  opacity: 1;
+  transform: translate (0, 0);
+}
+
+#right {
+  height: 200%;
+  width: 50%;
+  top: -200%;
+  right: -50%;
+  border-top-right-radius: 50px;
+  pointer-events: none;
+  opacity: 0;
+  transform: translate (25%, -25%);
+}
+
+#right:hover #up {
+  pointer-events: initial;
+  opacity: 1;
+  transform: translate (0, 0);
+}
+
+#up {
+  height: 50%;
+  width: 200%;
+  left: -200%;
+  border-top-left-radius: 50px;
+  pointer-events: none;
+  opacity: 0;
+  transform: translate (-25%, -25%);
+  transition: all 400ms ease-in-out;
+}
+
+#up:hover #left {
+  pointer-events: initial;
+  opacity: 1;
+  transform: translate (0, 0);
+}
+
+#left {
+  height: 200%;
+  width: 50%;
+  top: 100%;
+  border-bottom-left-radius: 50px;
+  pointer-events: none;
+  opacity: 0;
+  transform: translate (-25%, 25%);
+  transition: all 400ms ease-in-out;
 }
 
 .gif {
   position: absolute;
   background-color: transparent;
-  width: 75vmin;
-  height: 75vmin;
-  grid-area: 1 / 1 / 4 / 4;
-  display: none;
+  width: 100%;
+  height: 50%;
+  bottom: 0;
+  left: 0;
 }
 
-#center-center {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 7rem;
-  color: white;
-  opacity: 100%;
+.gif:before {
+  content: "?";
+  display: block;
+  height: 100%;
+  text-align: center;
+  line-height: 25vmin;
 }
 
-#down-right {
-  border-bottom-right-radius: 50%;
-  border-bottom-right-radius: 50%;
+.gif:after {
+  position: absolute;
+  top: 0;
+  left: 0;
+  pointer-events: none;
+  content: "";
+  display: block;
+  background: url("http://i.memeful.com/media/post/PRoPBdo_700wa_0.gif") center
+    center no-repeat;
+  background-size: cover;
+  border-radius: 50px;
+  width: 300%;
+  height: 300%;
+  transform: translateY(-66.6666666%);
+  opacity: 0;
+  transition: opacity 40ms ease-in-out;
 }
 
-#down-center,
-#down-right {
-  position: relative;
-  top: 100%;
-  transform: translateY(-80%);
-  transition: all 400ms ease-out;
-}
-
-#center-center:hover ~ #down-center,
-#center-center:hover ~ #down-right {
-  opacity: 100%;
-  transform: translateY(-100%);
-  transition: all 400ms ease-out;
-}
-
-#center-center:hover {
-  color: rgb(61, 165, 194);
-}
-
-#down-center:hover {
-  opacity: 100%;
-  transform: translateY(-100%);
-}
-
-#down-center:hover ~ #down-right {
-  opacity: 100%;
-  transform: translateY(-100%);
-}
-
-#down-right:hover {
-  opacity: 100%;
-  transform: translateY(-100%);
-}
-
-#down-right:hover ~ #down-center {
-  opacity: 100%;
-  transform: translateY(-100%);
+.gif:hover:after {
+  opacity: 1;
 }

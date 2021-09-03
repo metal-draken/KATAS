@@ -1,0 +1,86 @@
+* {
+  box-sizing: border-box;
+}
+
+html {
+  background-color: rgba(26, 52, 59, 1);
+  overflow: hidden;
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+  position: relative;
+}
+
+.pizza {
+  background-color: transparent;
+  position: relative;
+  width: 50vmin;
+  height: 50vmin;
+  top: calc(50% - 25vmin);
+  left: calc(50% - 25vmin);
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+.container {
+  position: relative;
+  width: 50vmin;
+  height: 50vmin;
+  display: box;
+  transform: rotateZ(45deg);
+}
+
+.slices {
+  position: absolute;
+  width: 25.1vmin;
+  height: 25.1vmin;
+  border-width: 0px;
+  border-color: tomato;
+  will-change: all;
+  background-color: tomato;
+}
+
+#slice1 {
+  left: 0%;
+  transform: translate();
+  opacity: 1;
+}
+
+#slice1:hover {
+  transform: translate(-5%, -5%);
+  opacity: 0.9;
+  transition: all 400ms ease-in-out;
+}
+
+#slice2 {
+  left: 50%;
+}
+
+#slice2:hover {
+  transform: translate(5%, -5%);
+  opacity: 0.9;
+  transition: all 400ms ease-in-out;
+}
+
+#slice3 {
+  top: 50%;
+}
+
+#slice3:hover {
+  transform: translate(-5%, 5%);
+  opacity: 0.9;
+  transition: all 400ms ease-in-out;
+}
+
+#slice4 {
+  top: 50%;
+  left: 50%;
+}
+
+#slice4:hover {
+  transform: translate(5%, 5%);
+  opacity: 0.9;
+  transition: all 400ms ease-in-out;
+}
