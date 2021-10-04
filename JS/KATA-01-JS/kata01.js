@@ -19,11 +19,15 @@ function kata01(num, nth) {
     
     if (nth<0) {
         return -1;
+    } else if (nth>intArray.length) {
+      return 0;
     } else {
         return intArray[nth];
-
     };
   
 };
 
-kata01(-88821, 4);
+kata01(-88821, -3);
+kata01(-868, 2);
+kata01(584, 2);
+kata01(584, 8);
