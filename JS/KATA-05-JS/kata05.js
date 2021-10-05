@@ -1,27 +1,18 @@
-/* Kata: https://www.codewars.com/kata/254-shades-of-grey/javascript */
+/* Kata: https://www.codewars.com/kata/simple-elevator/javascript */
 
-function ShadesOfGrey(howManyGreys) {
-    let array = []
-    if (howManyGreys > 254) {
-      for (let i = 254; i >0 ; i--) {
-        array.push(i)
-      }
-    } else if (howManyGreys<0) {
-       for (let i = 254; i >0 ; i--) {
-        array.push(0)
-      }
+function elevator(pisoActual,pisoFuturo) {
+    let pisoFuturo2= Number(pisoFuturo);
+    let nroDePisos = 4;
+    let nroDeBotones = 4;
+    console.log(pisoFuturo2);
+    
+    if (pisoActual < 0 || pisoActual > nroDePisos-1 || pisoFuturo2 < 0 || pisoFuturo2 > nroDeBotones-1) {
+      return 0
+    } else if (pisoActual === pisoFuturo2 || Number.isFinite(pisoActual) == false || Number.isFinite(pisoFuturo2) == false) {
+      return 0
     } else {
-      for (let i = howManyGreys; i >0 ; i--) {
-      array.push(i)
-      }
-   }
-   console.log(array);
-   
-   let hexArray = array.map (function(value) {
-     return value.toString(16)+value.toString(16)+value.toString(16);    
-   });
-   
-   console.log(hexArray);
- }
- 
- ShadesOfGrey(254)
+      return pisoFuturo2-pisoActual
+    }  
+}
+  
+  elevator(3,0);
