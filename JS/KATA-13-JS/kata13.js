@@ -1,3 +1,5 @@
+/* Kata: https://www.codewars.com/kata/mirror-object-tcejbo-rorrim/javascript */
+
 class BaseObj {
     constructor() {
     this.abc = "";
