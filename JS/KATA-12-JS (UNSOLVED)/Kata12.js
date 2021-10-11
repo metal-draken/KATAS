@@ -3,23 +3,20 @@ let fighters = [
   ["Ken", "Chun Li", "Zangief", "Dhalsim", "Sagat", "M.Bison"]
 ];
 
-let position = fighters[0][0];
+let initialBase= 0;
+let initialSubBase = 0
 
-let moves = ["up", "up", "left", "down", "right"]
+let position = fighters[initialBase][initialSubBase];
 
-
-function streetFighterSelection(fighters, position, moves) {
-
+function up (){
+  initialBase = initialBase + 1;
+  return position = fighters[initialBase][initialSubBase];
 }
 
+console.log(up())
+console.log(position)
 
-
-
-
-
-
-
-
+let moves = [up];
 
 
 let fightersUp = fighters[0];
@@ -30,12 +27,8 @@ console.log(fightersDown);
 
 console.log(fighters[0][0])
 
-function prueba(...X) {
-if (X=" ") {
-  return fightersUp[0]
-} else if (X = "right") {
-  
-}
-};
 
-prueba(18);
+function streetFighterSelection(moves) {
+
+}
+
