@@ -1,4 +1,4 @@
-/* Kata: https://www.codewars.com/kata/jaden-casing-strings/javascript */
+/* Kata: https://www.codewars.com/kata/array-dot-prototype-dot-size/javascript */
 
 function size(arrayToWork) {
     let arrayToOne = arrayToWork.map(function(value){
