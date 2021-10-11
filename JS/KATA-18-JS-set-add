@@ -1,0 +1,38 @@
+let describe = () => {
+    let set;
+    let beforeEach = () => set = new Set();
+    let it = function() {
+        const fn = () => {};
+        set.add(2);
+        set.add(2);
+        set.add(fn);
+        set.add(fn);
+        set.add(undefined);        
+        assert.equal(set.size, 3);
+    };
+
+    let it2 = function() {
+        set.add.add;
+        assert.equal(set.has(2), true);
+    };
+
+    let it3 = function() {
+        set.add
+        assert.equal(set.has(void 0), true);
+    };
+
+    let it4 = function() {
+        set.add(+0);
+        set.add(+0);
+        assert.equal(set.has(+0), true);
+    };
+
+  beforeEach();
+  it();
+  it2();
+  it3();
+  it4();
+  };
+  
+ 
+  describe();
