@@ -36,3 +36,11 @@ let describe = () => {
   
  
   describe();
+
+
+  /* NOW I UNDERSTAND THAT BEFOREEACH AND DESCRIBR WORK IN TEST FRAMEWORKS. 
+  I WILL DO THE NEXT KATAS DIRECTLY IN THE WEB.
+  
+  KATA19 - add-delete (DONE)
+  KATA20 - map-basics (DONE)
+  */
